@@ -37,6 +37,7 @@ a {
   border-radius: 10px;
   padding: 16px;
   max-width: 620px;
+  margin: 0 auto;
 }
 
 .currently {
@@ -50,4 +51,9 @@ a {
 
 .icon {
   font-size: 30px;
+}
+
+#github {
+  max-width: 620px;
+  margin: 0 auto;
 }
