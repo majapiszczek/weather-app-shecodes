@@ -23,7 +23,8 @@ p {
 button {
   padding: 2px 6px;
   border-radius: 6px;
-  background: grey;
+  background: #e5e5e5;
+  border: 1px solid black;
 }
 
 a {
@@ -56,4 +57,8 @@ a {
 #github {
   max-width: 620px;
   margin: 0 auto;
+}
+
+#description {
+  text-transform: capitalize;
 }
