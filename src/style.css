@@ -54,6 +54,11 @@ a {
   font-size: 30px;
 }
 
+.active {
+  color: black;
+  cursor: default;
+}
+
 #github {
   max-width: 620px;
   margin: 0 auto;
@@ -61,4 +66,8 @@ a {
 
 #description {
   text-transform: capitalize;
+}
+
+.active:hover {
+  color: black;
 }
