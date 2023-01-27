@@ -59,6 +59,10 @@ a {
   cursor: default;
 }
 
+.forecast-temp {
+  text-align: center;
+}
+
 #github {
   max-width: 620px;
   margin: 0 auto;
@@ -66,6 +70,16 @@ a {
 
 #description {
   text-transform: capitalize;
+}
+
+#min {
+  text-align: center;
+  opacity: 0.5;
+}
+
+#tomorrow,
+#max {
+  text-align: center;
 }
 
 .active:hover {

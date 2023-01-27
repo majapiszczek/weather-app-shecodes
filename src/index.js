@@ -15,6 +15,8 @@ function showTemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
+  showForecast();
+
   document
     .querySelector("#icon")
     .setAttribute(
@@ -23,6 +25,29 @@ function showTemp(response) {
     );
 
   celsiusTemp = response.data.temperature.current;
+}
+
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tmw", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-3">
+        <div id="tomorrow">${day}</div>
+        <img src="#" alt="forecast-icon" />
+        <div class="forecast-temp"><span id="max">15°</span> <span id="min">10°</span></div>
+      </div>
+    
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function search(city) {
