@@ -15,7 +15,7 @@ function showTemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
-  showForecast();
+  showForecast(response);
 
   document
     .querySelector("#icon")
@@ -25,19 +25,28 @@ function showTemp(response) {
     );
 
   celsiusTemp = response.data.temperature.current;
+
+  getForecast(response.data.coordinates);
 }
 
-function showForecast() {
+function getForecast(coordinates) {
+  let apiKey = "8a74ad5eo45tde558fe05997d33ec4b6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(showForecast);
+}
+
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Tmw", "Fri", "Sat", "Sun"];
+  let days = ["Tmw", "Fri", "Sat", "Sun", "Mon"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
-      <div class="col-3">
+      <div class="col">
         <div id="tomorrow">${day}</div>
         <img src="#" alt="forecast-icon" />
         <div class="forecast-temp"><span id="max">15°</span> <span id="min">10°</span></div>
