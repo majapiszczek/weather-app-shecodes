@@ -77,7 +77,12 @@ a {
   opacity: 0.5;
 }
 
-#tomorrow,
+#forecast-icons {
+  display: block;
+  margin: 0 auto;
+}
+
+#forecast-day,
 #max {
   text-align: center;
 }
