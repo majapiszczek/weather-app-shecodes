@@ -27,12 +27,6 @@ button {
   border: 1px solid black;
 }
 
-a {
-  font-size: 16px;
-  text-decoration: none;
-  color: blueviolet;
-}
-
 .border {
   border: 1px solid black;
   border-radius: 10px;
@@ -87,6 +81,7 @@ a {
   text-align: center;
 }
 
-.active:hover {
-  color: black;
+#unit {
+  font-size: 16px;
+  text-decoration: none;
 }

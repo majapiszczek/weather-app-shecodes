@@ -36,7 +36,6 @@ function formatDay(timestamp) {
 }
 
 function showForecast(response) {
-  console.log(response);
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -86,24 +85,6 @@ function searchCity(event) {
   search(city);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemp = Math.round(celsiusTemp) * 1.8 + 32;
-  let tempElement = document.querySelector("#number");
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let tempElement = document.querySelector("#number");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
 let now = new Date();
 
 let days = [
@@ -143,13 +124,5 @@ function getLocation(event) {
 
 let locationButton = document.querySelector("button");
 locationButton.addEventListener("click", getLocation);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-let celsiusTemp = null;
 
 search("New York");
