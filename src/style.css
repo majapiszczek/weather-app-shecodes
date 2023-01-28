@@ -1,5 +1,7 @@
 body {
   font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  background-color: #efa63f;
 }
 
 form {
@@ -21,18 +23,20 @@ p {
 }
 
 button {
+  color: black;
   padding: 2px 6px;
   border-radius: 6px;
-  background: #e5e5e5;
-  border: 1px solid black;
+  background: #efa63f;
+  border: 1px solid #909294;
 }
 
 .border {
-  border: 1px solid black;
+  border: 1px solid 909294;
   border-radius: 10px;
   padding: 16px;
   max-width: 620px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .currently {
@@ -48,11 +52,6 @@ button {
   font-size: 30px;
 }
 
-.active {
-  color: black;
-  cursor: default;
-}
-
 .forecast-temp {
   text-align: center;
 }
@@ -60,10 +59,25 @@ button {
 #github {
   max-width: 620px;
   margin: 0 auto;
+  padding: 6px;
+  color: white;
+  opacity: 0.8;
+}
+
+#github-link {
+  text-decoration: none;
+  color: black;
 }
 
 #description {
   text-transform: capitalize;
+}
+
+#input-button {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #efa63f;
+  border: 1px solid #909294;
 }
 
 #min {
@@ -84,4 +98,6 @@ button {
 #unit {
   font-size: 16px;
   text-decoration: none;
+  position: relative;
+  top: -30px;
 }
